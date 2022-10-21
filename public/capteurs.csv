@@ -1,0 +1,11 @@
+idCapteur,modele,typeCapteur,dateAchat,prix
+1,"capteur de température alpha1",1,2019-07-23,230.50
+2,"capteur de température beta3",1,2019-06-27,256.50
+3,"capteur de température alpha1",1,2019-06-23,276.50
+4,"capteur de température delta2",1,2019-04-06,234.50
+5,"capteur de température beta3",1,2019-03-26,285.40
+6,"capteur de température alpha1",1,2018-07-23,245.50
+7,"capteur de température beta3",1,2016-12-27,0.00
+8,"capteur de température delta2",1,2019-09-12,224.24
+9,"sonde sismique Harountazieff",2,2019-09-12,24524.24
+10,"sonde sismique Harountazieff",2,2019-09-10,22324.08
