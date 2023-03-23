@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gsb.iml" filepath="$PROJECT_DIR$/.idea/gsb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" filepath="$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" />
     </modules>
   </component>
 </project>
