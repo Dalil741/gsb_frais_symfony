@@ -13,6 +13,7 @@ class FraisForfaitType extends AbstractType
     {
         $builder
             ->add('libelle')
+
             ->add('montant')
         ;
     }

@@ -181,7 +181,7 @@ class FicheFrais
                 $ligneFraisForfait->setFicheFrais(null);
             }
         }
-
         return $this;
     }
+
 }
