@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\FicheFrais;
+use App\Form\MesFichesFraisType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -22,19 +23,23 @@ class MesFichesFraisController extends AbstractController
         $fiches = $repository->findBy(['user'=> $user]);
 
         foreach ($fiches as $FicheFrais){
-            $mois[] = $FicheFrais->getMois();
+            $listMois[$FicheFrais->getMois()] = $FicheFrais->getMois();
         }
-        $myForm = $this->createForm(ChoiceType::class);
+
+        $myForm = $this->createForm(MesFichesFraisType::class, null, [
+            'list_mois' => $listMois,
+        ]);
         $myForm->handleRequest($request);
 
-        $MaFiche = [];
         if ($myForm->isSubmitted() && $myForm->isValid())
         {
-
+           $selectMois = $myForm->get('liste_mois')->getData();
+           $maFiche = $repository->findOneBy(['mois' => $selectMois, 'user' => $user]);
         }
 
+
         return $this->render('mes_fiches_frais/index.html.twig', [
-            'controller_name' => 'MesFichesFraisController',
+            'myForm' => $myForm,
         ]);
     }
 }

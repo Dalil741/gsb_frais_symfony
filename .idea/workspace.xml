@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6182fb60-aec4-445a-ab19-c6c9ff9921f1" name="Changes" comment="V1">
+      <change beforePath="$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MesFichesFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MesFichesFraisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/FicheFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FicheFrais.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/MesFichesFraisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MesFichesFraisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mes_fiches_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mes_fiches_frais/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +120,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
@@ -159,6 +159,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
     </include_path>
   </component>
   <component name="ProjectId" id="2NPc4KR7vdXAfMkBLgov93kT2ml" />
@@ -171,11 +172,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Apps/wamp64/www/gsb_frais_symfony/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Symfony2.SettingsForm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -194,7 +197,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679568964485</updated>
       <workItem from="1679568965734" duration="880000" />
-      <workItem from="1679985270666" duration="11653000" />
+      <workItem from="1679985270666" duration="20599000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1679569100854</created>
@@ -210,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679988445479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="V1">
+      <created>1679997580104</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679997580104</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

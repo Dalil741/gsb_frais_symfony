@@ -6,8 +6,11 @@ use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\SubmitButton;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use function Sodium\add;
 
 class MesFichesFraisType extends AbstractType
 {
@@ -15,15 +18,20 @@ class MesFichesFraisType extends AbstractType
     {
         $builder
             ->add('liste_mois', ChoiceType::class, [
-                'label' => 'Mois',]);
+                'choices' => $options['list_mois'],
+                ])
 
-
+            ->add('valide', SubmitType::class, [
+                'label' => 'Valider',
+    ]);
 
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
+            'list_mois' => [],
+
         ]);
     }
 }
