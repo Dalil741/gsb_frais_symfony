@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6182fb60-aec4-445a-ab19-c6c9ff9921f1" name="Changes" comment="V1">
       <change beforePath="$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gsb_frais_symfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MesFichesFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MesFichesFraisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FicheFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FicheFrais.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/MesFichesFraisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MesFichesFraisType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mes_fiches_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mes_fiches_frais/index.html.twig" afterDir="false" />
@@ -197,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679568964485</updated>
       <workItem from="1679568965734" duration="880000" />
-      <workItem from="1679985270666" duration="20599000" />
+      <workItem from="1679985270666" duration="25474000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1679569100854</created>
@@ -220,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679997580104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="V1">
+      <created>1680165530996</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680165530996</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

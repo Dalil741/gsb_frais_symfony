@@ -40,6 +40,7 @@ class MesFichesFraisController extends AbstractController
 
         return $this->render('mes_fiches_frais/index.html.twig', [
             'myForm' => $myForm,
+            'maFiche' => $maFiche
         ]);
     }
 }

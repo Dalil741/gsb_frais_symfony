@@ -3,9 +3,31 @@
 {% block title %}Hello MesFichesFraisController!{% endblock %}
 
 {% block body %}
-<div class="row m-3">
+<div class="row m-2">
         {{ form(myForm) }}
 </div>
+<div class="col-lg-6">
+    Fiche frais selectionnée : </div>
+    <div class="text-center my-3">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Mois</th>
+                <th>Justificatifs</th>
+                <th>Date</th>
+                <th>Etat</th>
 
-    
+            </tr>
+            <tr>
+                <td>{{ maFiche.id }}</td>
+                <td>{{ maFiche.mois }}</td>
+                <td>{{ maFiche.nbJustificatifs }}</td>
+                <td>{{ maFiche.dateModif.format('Y-M-D') }}</td>
+
+            </tr>
+        </table>
+    </div>
+
+
+
 {% endblock %}
