@@ -18,6 +18,7 @@ class MesFichesFraisController extends AbstractController
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $user = $this->getUser();
+        $maFiche = null;
 
         $repository = $doctrine->getRepository(FicheFrais::class);
         $fiches = $repository->findBy(['user'=> $user]);
@@ -33,6 +34,7 @@ class MesFichesFraisController extends AbstractController
 
         if ($myForm->isSubmitted() && $myForm->isValid())
         {
+
            $selectMois = $myForm->get('liste_mois')->getData();
            $maFiche = $repository->findOneBy(['mois' => $selectMois, 'user' => $user]);
         }
@@ -40,7 +42,8 @@ class MesFichesFraisController extends AbstractController
 
         return $this->render('mes_fiches_frais/index.html.twig', [
             'myForm' => $myForm,
-            'maFiche' => $maFiche
+            'maFiche' => $maFiche,
+
         ]);
     }
 }

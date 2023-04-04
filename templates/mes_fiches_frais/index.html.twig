@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="row m-2">
-        {{ form(myForm) }}
+       {{ form(myForm) }}
 </div>
 <div class="col-lg-6">
     Fiche frais selectionnée : </div>
@@ -18,7 +18,7 @@
                 <th>Etat</th>
 
             </tr>
-            <tr>
+            <tr> {% if maFiche is not null  %}
                 <td>{{ maFiche.id }}</td>
                 <td>{{ maFiche.mois }}</td>
                 <td>{{ maFiche.nbJustificatifs }}</td>
@@ -29,5 +29,5 @@
     </div>
 
 
-
+{% endif %}
 {% endblock %}
