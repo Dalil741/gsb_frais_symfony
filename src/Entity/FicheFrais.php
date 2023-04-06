@@ -39,7 +39,7 @@ class FicheFrais
     #[ORM\OneToMany(mappedBy: 'fichefrais', targetEntity: LigneFraisHorsForfait::class, orphanRemoval: true, fetch: 'EAGER')]
     private Collection $ligneFraisHorsForfaits;
 
-    #[ORM\OneToMany(mappedBy: 'ficheFrais', targetEntity: LigneFraisForfait::class, orphanRemoval: true, fetch: 'EAGER')]
+    #[ORM\OneToMany(mappedBy: 'ficheFrais', targetEntity: LigneFraisForfait::class, orphanRemoval: true, fetch: 'EAGER', cascade: ['persist'])]
     private Collection $ligneFraisForfaits;
 
     public function __construct()
