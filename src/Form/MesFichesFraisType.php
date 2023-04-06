@@ -5,10 +5,8 @@ namespace App\Form;
 use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\SubmitButton;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MesFichesFraisType extends AbstractType
@@ -23,7 +21,6 @@ class MesFichesFraisType extends AbstractType
             ->add('valide', SubmitType::class, [
                 'label' => 'Valider',
     ]);
-
     }
 
     public function configureOptions(OptionsResolver $resolver): void
