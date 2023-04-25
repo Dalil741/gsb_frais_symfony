@@ -6,6 +6,7 @@ use App\Entity\Etat;
 use App\Entity\FicheFrais;
 use App\Entity\FraisForfait;
 use App\Entity\LigneFraisForfait;
+use App\Form\NewFicheFraisLignesFraisForfaitType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -69,7 +70,18 @@ class SaisieFicheFraisController extends AbstractController
             $doctrine->getManager()->flush();
         }
 
+        $formLignesFrais = $this->createForm(NewFicheFraisLignesFraisForfaitType::class, null, ['fiche' => $fiche] );
+        $formLignesFrais->handleRequest($request);
+        if ($formLignesFrais->isSubmitted() && $formLignesFrais->isValid()) {
+            $fiche->getLigneFraisForfaits()[0]->setQuantite($formLignesFrais->get('ForfaitEtape')->getData()) ;
+            $fiche->getLigneFraisForfaits()[1]->setQuantite($formLignesFrais->get('FraisKilometrique')->getData()) ;
+            $fiche->getLigneFraisForfaits()[2]->setQuantite($formLignesFrais->get('NuiteeHotel')->getData()) ;
+            $fiche->getLigneFraisForfaits()[3]->setQuantite($formLignesFrais->get('RepasRestaurant')->getData()) ;
 
+            $doctrine->getManager()->persist($fiche);
+            $doctrine->getManager()->flush();
+
+        }
 
         return $this->render('saisie_fiche_frais/index.html.twig', [
             'controller_name' => 'SaisieFicheFraisController',
