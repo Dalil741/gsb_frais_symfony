@@ -82,7 +82,12 @@ class SaisieFicheFraisController extends AbstractController
             $doctrine->getManager()->persist($fiche);
             $doctrine->getManager()->flush();
 
-            $
+            $LignesFraisHF = new LigneFraisForfait($fiche, null, null, null);
+            $LignesFraisHF = $this->createForm(NewFicheFraisLignesFraisForfaitType::class, $LignesFraisHF);
+            $formLignesFrais->handleRequest($request);
+            if ($formLignesFrais->isSubmitted() && $formLignesFrais->isValid()) {
+                //$LignesFraisHF
+            }
 
 
         }
