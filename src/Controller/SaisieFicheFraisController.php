@@ -78,13 +78,17 @@ class SaisieFicheFraisController extends AbstractController
             $fiche->getLigneFraisForfaits()[2]->setQuantite($formLignesFrais->get('NuiteeHotel')->getData()) ;
             $fiche->getLigneFraisForfaits()[3]->setQuantite($formLignesFrais->get('RepasRestaurant')->getData()) ;
 
+
             $doctrine->getManager()->persist($fiche);
             $doctrine->getManager()->flush();
+
+            $
+
 
         }
 
         return $this->render('saisie_fiche_frais/index.html.twig', [
-            'controller_name' => 'SaisieFicheFraisController',
+            'formLignesFrais' => $formLignesFrais,
 
         ]);
     }
