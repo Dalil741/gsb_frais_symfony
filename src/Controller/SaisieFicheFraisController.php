@@ -6,7 +6,9 @@ use App\Entity\Etat;
 use App\Entity\FicheFrais;
 use App\Entity\FraisForfait;
 use App\Entity\LigneFraisForfait;
+use App\Entity\LigneFraisHorsForfait;
 use App\Form\NewFicheFraisLignesFraisForfaitType;
+use App\Form\NewFicheFraisLignesHorsForfaitType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -82,18 +84,24 @@ class SaisieFicheFraisController extends AbstractController
             $doctrine->getManager()->persist($fiche);
             $doctrine->getManager()->flush();
 
-            $LignesFraisHF = new LigneFraisForfait($fiche, null, null, null);
-            $LignesFraisHF = $this->createForm(NewFicheFraisLignesFraisForfaitType::class, $LignesFraisHF);
-            $formLignesFrais->handleRequest($request);
-            if ($formLignesFrais->isSubmitted() && $formLignesFrais->isValid()) {
-                //$LignesFraisHF
+        }
+
+            $LignesFraisHF = new LigneFraisHorsForfait();
+            $formLignesFraisHF = $this->createForm(NewFicheFraisLignesHorsForfaitType::class, $LignesFraisHF);
+            $formLignesFraisHF->handleRequest($request);
+            if ($formLignesFraisHF->isSubmitted() && $formLignesFraisHF->isValid()) {
+                $fiche->addLigneFraisHorsForfait($LignesFraisHF);
+
+                $doctrine->getManager()->persist($fiche);
+                $doctrine->getManager()->flush();
             }
 
 
-        }
 
         return $this->render('saisie_fiche_frais/index.html.twig', [
-            'formLignesFrais' => $formLignesFrais,
+            'formLignesFrais' => $formLignesFrais->createView(),
+            'formLignesFraisHF' => $formLignesFraisHF->createView(),
+            'fiche'=> $fiche,
 
         ]);
     }

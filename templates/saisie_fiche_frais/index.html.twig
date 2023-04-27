@@ -4,6 +4,38 @@
 
 {% block body %}
 
-{{ form(formLignesFrais) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Frais Forfaits</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form(formLignesFrais) }}
+            </div>
+        </div>
+            <div class="col-md-12">
+                <h1>Ajouter des frais hors forfaits</h1>
+            </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                {{ form(formLignesFraisHF) }}
+
+        </div>
+    </div>
+        <table>
+            {% for ligneFraisHF in fiche.ligneFraisHorsForfaits %}
+                <tr>
+                    <td>{{ ligneFraisHF.date|date('d-m-y') }} </td>
+                    <td>{{ ligneFraisHF.libelle }} </td>
+
+                    <td>{{ ligneFraisHF.montant }} </td>
+
+                </tr>
+
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}

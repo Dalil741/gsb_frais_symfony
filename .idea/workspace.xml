@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6182fb60-aec4-445a-ab19-c6c9ff9921f1" name="Changes" comment="V1.1" />
+    <list default="true" id="6182fb60-aec4-445a-ab19-c6c9ff9921f1" name="Changes" comment="V1.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SaisieFicheFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SaisieFicheFraisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NewFicheFraisLignesHorsForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NewFicheFraisLignesHorsForfaitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/saisie_fiche_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/saisie_fiche_frais/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +196,7 @@
       <workItem from="1679985270666" duration="25627000" />
       <workItem from="1680596929128" duration="5005000" />
       <workItem from="1680762215738" duration="12886000" />
-      <workItem from="1682340760988" duration="13852000" />
+      <workItem from="1682340760988" duration="24378000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1679569100854</created>
@@ -270,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682416845710</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="V1.1">
+      <created>1682497021392</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682497021392</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
